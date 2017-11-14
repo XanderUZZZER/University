@@ -11,13 +11,18 @@ namespace University
     {
         private Dictionary<Subject, int> grades = new Dictionary<Subject, int>();
 
-        public int Luck { get; }
+        public int Luck
+        {
+            get
+            {
+                Random r = new Random();
+                Thread.Sleep(10);  //to be sure the random generated value differs of other instances
+                return r.Next(80, 100);
+            }
+        }
 
         public Student(string name) : base(name)
         {
-            Random r = new Random();
-            Thread.Sleep(10);  //to be sure the random generates different value from other instances        
-            Luck = r.Next(80, 100);
         }
 
         public void PassExam(Subject subject, int grade)
