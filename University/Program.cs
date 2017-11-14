@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace University
 {
@@ -34,6 +31,7 @@ namespace University
                 new Student("Katya"),
                 new Student("Oksana")
             };
+
             Session winterSession = new Session(Professors, Group);
             winterSession.StartSession();
             winterSession.EndSession();
