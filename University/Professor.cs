@@ -16,8 +16,6 @@ namespace University
 
         public void Examine(Student student)
         {
-            Random r = new Random();
-            Thread.Sleep(10); //to be sure the random generated value differs of other instances
             nastiness = (double)(r.Next(5, 10)) / 10.0;
             int grade = (int)(nastiness * student.Luck);
             student.PassExam(subject, grade);

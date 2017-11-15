@@ -15,8 +15,6 @@ namespace University
         {
             get
             {
-                Random r = new Random();
-                Thread.Sleep(10);  //to be sure the random generated value differs of other instances
                 return r.Next(80, 100);
             }
         }

@@ -9,6 +9,7 @@ namespace University
     abstract class Person
     {
         protected string Name { get; }
+        protected Random r = new Random();
 
         public Person(string name)
         {
